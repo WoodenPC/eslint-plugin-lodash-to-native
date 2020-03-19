@@ -36,7 +36,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "lodash-to-native/rule-name": 2
+        "lodash-to-native/map": "warn"
     }
 }
 ```
