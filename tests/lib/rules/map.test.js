@@ -24,6 +24,15 @@ ruleTester.run('lodash _.map to native', rule, {
         const _ = someLib;
         _.map([a, b, c], fn)
       `
+    },
+    {
+      code: `
+        if (Array.isArray(collection)) {
+          collection.map(fn);
+        } else {
+          _.map(collection, fn);
+        }
+      `
     }
   ],
   invalid: [
